@@ -11,11 +11,12 @@ class CreatePraicesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('praices', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->bigIncrements('id');
+            $table->string('job_name', 50); // Вид работ
+            $table->integer('price_of_work'); // Цена
         });
     }
 
@@ -24,7 +25,7 @@ class CreatePraicesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('praices');
     }
