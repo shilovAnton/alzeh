@@ -46,10 +46,7 @@
                                         style="vertical-align: inherit;">Настройки</span></span></button>
                         </form>
                     @else
-                        <form method="get" action="{{ route('login') }}">
-                            <button type="button" class="btn btn-outline-light me-2"><span
-                                    style="vertical-align: inherit;"><span
-                                        style="vertical-align: inherit;">Вход</span></span></button>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
                         </form>
                         @if (Route::has('register'))
                             <form method="get" action="{{ route('login') }}">
@@ -58,6 +55,8 @@
                                             style="vertical-align: inherit;">Регистрация</span></span></button>
                             </form>
                         @endif
+                    @endauth
+                @endif
 
             </div>
         </div>

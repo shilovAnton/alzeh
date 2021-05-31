@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@home');
+Route::get('/', [MainController::class, 'home']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,4 +22,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/timesheet', 'MainController@timesheet');
+Route::get('/timesheet', [MainController::class, 'timesheet']);
