@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class PraicesSeeder extends Seeder
+class PricesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -34,7 +34,7 @@ class PraicesSeeder extends Seeder
     public function run(): void
     {
         foreach ($this->job_price as $key => $value) {
-            DB::table('praices')->insert(
+            DB::table('prices')->insert(
                 [
                     'job_name' => $key,
                     'price_of_work' => $value,

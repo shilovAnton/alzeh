@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePraicesTable extends Migration
+class CreatePricesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePraicesTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('praices', function (Blueprint $table) {
+        Schema::create('prices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('job_name', 50); // Вид работ
             $table->integer('price_of_work'); // Цена
@@ -27,6 +27,6 @@ class CreatePraicesTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('praices');
+        Schema::dropIfExists('prices');
     }
 }
